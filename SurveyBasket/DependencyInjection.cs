@@ -1,13 +1,20 @@
 ﻿using MapsterMapper;
+using SurveyBasket.Persistence;
 using System.Reflection;
 
 namespace SurveyBasket
 {
     public static class DependencyInjection
     {
-        public static IServiceCollection AddDependecies(this IServiceCollection services)
+        public static IServiceCollection AddDependecies(this IServiceCollection services,IConfiguration configuration)
         {
             services.AddControllers();
+
+            var connectionString = configuration.GetConnectionString("DefaultConnection") ??
+               throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+           services.AddDbContext<ApplicationDbcontext>(options =>
+                options.UseSqlServer(connectionString));
+
             services.AddScoped<IPollServices, PollService>();
             services
                 .AddSwaggerConfig()
