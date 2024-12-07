@@ -1,10 +1,8 @@
-﻿using SurveyBasket.Contracts.Requests;
-
-namespace SurveyBasket.Contracts.Validations
+﻿namespace SurveyBasket.Contracts.Polls
 {
-    public class PollRequestValidator : AbstractValidator<PollRequest>
+    public class LoginRequestValidator : AbstractValidator<PollRequest>
     {
-        public PollRequestValidator()
+        public LoginRequestValidator()
         {
             RuleFor(x => x.Title)
                 .NotEmpty()
