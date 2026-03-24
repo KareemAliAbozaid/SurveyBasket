@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gempqkTrsOA=",
+  "dgSpecHash": "F+68IVv2Hl4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\TERA 4YOU\\Desktop\\API\\SurveyBasket\\SurveyBasket\\SurveyBasket.csproj",
+  "projectFilePath": "C:\\Users\\TERA 4YOU\\source\\repos\\SurveyBasket\\SurveyBasket\\SurveyBasket.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TERA 4YOU\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\TERA 4YOU\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
@@ -94,8 +94,7 @@
     "C:\\Users\\TERA 4YOU\\.nuget\\packages\\system.text.json\\9.0.0\\system.text.json.9.0.0.nupkg.sha512",
     "C:\\Users\\TERA 4YOU\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
     "C:\\Users\\TERA 4YOU\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\TERA 4YOU\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
-    "C:\\Users\\TERA 4YOU\\.nuget\\packages\\microsoft.net.sdk.compilers.toolset\\9.0.100\\microsoft.net.sdk.compilers.toolset.9.0.100.nupkg.sha512"
+    "C:\\Users\\TERA 4YOU\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -109,5 +109,15 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SurveyBasket.Controllers.AuthController",
+    "Method": "Get",
+    "RelativePath": "Auth",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\TERA 4YOU\\Desktop\\API\\SurveyBasket\\SurveyBasket\\SurveyBasket.csproj": {}
+    "C:\\Users\\TERA 4YOU\\source\\repos\\SurveyBasket\\SurveyBasket\\SurveyBasket.csproj": {}
   },
   "projects": {
-    "C:\\Users\\TERA 4YOU\\Desktop\\API\\SurveyBasket\\SurveyBasket\\SurveyBasket.csproj": {
+    "C:\\Users\\TERA 4YOU\\source\\repos\\SurveyBasket\\SurveyBasket\\SurveyBasket.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\TERA 4YOU\\Desktop\\API\\SurveyBasket\\SurveyBasket\\SurveyBasket.csproj",
+        "projectUniqueName": "C:\\Users\\TERA 4YOU\\source\\repos\\SurveyBasket\\SurveyBasket\\SurveyBasket.csproj",
         "projectName": "SurveyBasket",
-        "projectPath": "C:\\Users\\TERA 4YOU\\Desktop\\API\\SurveyBasket\\SurveyBasket\\SurveyBasket.csproj",
+        "projectPath": "C:\\Users\\TERA 4YOU\\source\\repos\\SurveyBasket\\SurveyBasket\\SurveyBasket.csproj",
         "packagesPath": "C:\\Users\\TERA 4YOU\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\TERA 4YOU\\Desktop\\API\\SurveyBasket\\SurveyBasket\\obj\\",
+        "outputPath": "C:\\Users\\TERA 4YOU\\source\\repos\\SurveyBasket\\SurveyBasket\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\TERA 4YOU\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -38,8 +42,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
-        }
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -95,12 +100,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.Net.Sdk.Compilers.Toolset",
-              "version": "[9.0.100, 9.0.100]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -109,7 +108,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.312/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

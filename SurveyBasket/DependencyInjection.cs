@@ -26,7 +26,7 @@ namespace SurveyBasket
                 .AddSwaggerConfig()
                 .AddMapstarConfig()
                 .AddFlountValidationConfig()
-                .AddAuthConfig();
+                .AddAuthConfig(configuration);
 
             return services;
         }
@@ -55,9 +55,11 @@ namespace SurveyBasket
 
             return services;
         }
-        private static IServiceCollection AddAuthConfig(this IServiceCollection services)
+        //Authentication
+        private static IServiceCollection AddAuthConfig(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddSingleton<IJwtProvider, JwtProvider>();
+            services.Configure<JwtOptions>(configuration.GetSection("jwt"));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbcontext>();
@@ -76,11 +78,18 @@ namespace SurveyBasket
                     ValidateIssuer = true,
                     ValidateAudience = true,
                     ValidateLifetime = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("J7MfAb4WcAIMkkigVtIepIILOVJEjAcB")),
-                    ValidIssuer = "SurveyBasket",
-                    ValidAudience = "SurveyBasketApp"
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:Key"]!)),
+                    ValidIssuer = configuration["Jwt:Issuer"],
+                    ValidAudience = configuration["Jwt:Audience"],
                 };
             });
+
+            var test = new
+            {
+                IssuerSigningKey = configuration["Jwt:Key"]!,
+                ValidIssuer = configuration["Jwt:Issuer"],
+                ValidAudience = configuration["Jwt:Audience"],
+            };
 
             return services;
         }
