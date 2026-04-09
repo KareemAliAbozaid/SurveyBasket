@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using SurveyBasket.Authentication;
@@ -23,5 +24,7 @@ namespace SurveyBasket.Controllers
         {
             return Ok(_jwtoptions.Audience);
         }
+
+      
     }
 }
