@@ -1,8 +1,10 @@
 ﻿using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.JsonWebTokens;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using JwtRegisteredClaimNames = Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames;
 
 namespace SurveyBasket.Authentication
 {
@@ -31,6 +33,28 @@ namespace SurveyBasket.Authentication
                 signingCredentials: signingcredintial
                 );
             return (token: new JwtSecurityTokenHandler().WriteToken(token), expiresIn:_jwtoptions.ExpiryMinutes*60);
+        }
+
+        public string ValidateTken(string token)
+        {
+            var tokenHandler=new JwtSecurityTokenHandler();
+            var symmetricsecuretykey=new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtoptions.Key));
+            try
+            {
+              tokenHandler.ValidateToken(token,new TokenValidationParameters
+              {
+                  IssuerSigningKey=symmetricsecuretykey,
+                  ValidateIssuerSigningKey=true,
+                  ValidateIssuer=false, ValidateAudience=false,
+                  ClockSkew=TimeSpan.Zero
+              },out SecurityToken validatedToken);
+                var jwtToken = (JwtSecurityToken)validatedToken;
+                return jwtToken.Claims.First(x => x.Type == JwtRegisteredClaimNames.Sub).Value;
+            }
+            catch 
+            {
+                return null;
+            }
         }
     }
 }
